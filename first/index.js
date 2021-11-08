@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function getFromlocalStorage(){
-    localStorage.getItem("json")
+   return localStorage.getItem("json")
 
 }
 
