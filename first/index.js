@@ -1,4 +1,4 @@
-let json = `[{
+let json = [{
     "person": "Супермен",
     "universe":  "DC Comics",
     "activity": "борец за справедливость",
@@ -22,10 +22,10 @@ let json = `[{
     "superpowers": "сверхчеловеческая сила искорость, выносливость, полет",
     "isRange": 5,
     "id" : 2
-}]`;
+}];
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    let superheros = JSON.parse(json);
+    let superheros = json;
 
     let superherosContent = "";
     for (let superhero of superheros) {
