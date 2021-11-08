@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+.app-wrap {
+    justify-content:baseline;
+    display: flex;
+    flex-direction:column-reverse;
+    text-align: center;
+    margin: 100px;
+    
+}
+
+body {
+    background-color: grey;
+}
+
+.location{
+padding-bottom: 50px;
+color: maroon;
+font-size: 50px;
+
+}
+</style>
+
 </head>
 
 <body>
@@ -13,15 +35,16 @@
         <main>
             <section class="location">
                 <div class="city"></div>
-                <div class="date"></div>
             </section>
             <div class="current">
-                <div class="temp"><span class="tempValue"></span></div>
+           <span class="tempValue"></span>
                 <div class="weather"></div>
                 <div class="hi-low"></div>
             </div>
         </main>
     </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
