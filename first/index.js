@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     <h3> Вселенная: ${superhero.universe} </h3>
     <div>Род деятельности: ${superhero.activity} </div>
     <div>Суперсилы: ${superhero.superpowers} </div>
-    <input type="range" id="one" max="10"> ${superhero.isRange}
+    <input type="range" id="one" max="10"> <span> ${superhero.isRange}</span> 
    </div>`;
     }
     document.querySelector("#container").innerHTML = superherosContent;
