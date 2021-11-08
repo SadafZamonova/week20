@@ -25,7 +25,13 @@ let json = [{
 }];
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    let superheros = json;
+    let superheros = getFromlocalStorage();
+
+    if (superheros) {
+        superheros = JSON.parse(superheros);
+    } else {
+        superheros = json;
+    }
 
     let superherosContent = "";
     for (let superhero of superheros) {
