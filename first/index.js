@@ -53,17 +53,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     setFromlocalStorage(superheros);
    });
     }
-   
-
-
-
 });
 
 function getFromlocalStorage(){
     return localStorage.getItem("heroes")
 
 }
-
 
 function setFromlocalStorage(data){
     localStorage.setItem("heroes", JSON.stringify(data));
