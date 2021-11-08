@@ -3,7 +3,7 @@ let json = `[{
     "universe":  "DC Comics",
     "activity": "борец за справедливость",
     "superpowers": "непробиваемость, суперсила, полет, самоисцеление, суперзрение и суперслух, классный костюм",
-    "isRange": "рейтинг"
+    "isRange": 7
 },
 
 {
@@ -11,14 +11,14 @@ let json = `[{
     "universe": "Marvel Comics",
     "activity":  "гений, миллиардер, плейбой, филантроп",
     "superpowers":  "высокий уровень интеллекта, широкие познания науки и техники, связь со всемирной паутиной, бронекостюмы",
-    "isRange": "рейтинг"
+    "isRange": 3
 },
 {
     "person": "Чудо-женщина",
     "universe":  "DC Comics",
     "activity": "супергероиня, секретарь-референт",
     "superpowers": "сверхчеловеческая сила искорость, выносливость, полет",
-    "isRange": "рейтинг"
+    "isRange": 5
 }]`;
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     <h3> Вселенная: ${superhero.universe} </h3>
     <div>Род деятельности: ${superhero.activity} </div>
     <div>Суперсилы: ${superhero.superpowers} </div>
-    <input type="range" id="one" max="10"> <span>10</span> ${superhero.isRange}
+    <input type="range" id="one" max="10"> ${superhero.isRange}
    </div>`;
     }
     document.querySelector("#container").innerHTML = superherosContent;
