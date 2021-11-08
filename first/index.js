@@ -34,19 +34,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     let superherosContent = "";
-    for (let superhero of superheros) {
+    for (let i = 0; i < superheros.length; i++) {
+        let superhero = superheros[i];
         superherosContent += `<div class="superhero">
     <h2> ${superhero.person}</h2>
     <h3> Вселенная: ${superhero.universe} </h3>
     <div>Род деятельности: ${superhero.activity} </div>
     <div>Суперсилы: ${superhero.superpowers} </div>
-    <input   type="range" id="${superhero.id}" max="10"> <div>Рейтинг:</div> <span>  ${superhero.isRange}</span> 
+    <input   type="range" id="${superhero.id}" max="10"> <h5>Рейтинг:</h5> <span id="span_${superhero.id}">  ${superhero.isRange}</span> 
    </div>`
    document.querySelector("#container").innerHTML = superherosContent;
-   document.querySelector("#one").oninput = () => {
-       let range = document.querySelector("#one").value;
-       document.querySelector("span").innerHTML=range;
-   }
+
+   document.addEventListener("input", function() {
+    let range = document.querySelector(`#${superhero.id}`).value;
+    document.querySelector(`#span_${superhero.id}`).innerHTML=range;
+    superhero.isRange = range;
+    superheros[i] = superhero;
+    setFromlocalStorage(superheros);
+   });
     }
    
 
@@ -55,12 +60,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function getFromlocalStorage(){
-   return localStorage.getItem("json")
+    return localStorage.getItem("heroes")
 
 }
 
 
 function setFromlocalStorage(data){
-    localStorage.setItem("json", JSON.stringify(data));
+    localStorage.setItem("heroes", JSON.stringify(data));
 }
-
