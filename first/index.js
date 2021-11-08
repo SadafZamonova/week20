@@ -41,13 +41,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     <div>Род деятельности: ${superhero.activity} </div>
     <div>Суперсилы: ${superhero.superpowers} </div>
     <input   type="range" id="one" max="10"> <div>Рейтинг:</div> <span>  ${superhero.isRange}</span> 
-   </div>`;
+   </div>`
+   document.querySelector("#container").innerHTML = superherosContent;
+   document.querySelector("#one").oninput = () => {
+       let range = document.querySelector("#one").value;
+       document.querySelector("span").innerHTML=range;
+   }
     }
-    document.querySelector("#container").innerHTML = superherosContent;
-document.querySelector("#one").oninput = () => {
-    let range = document.querySelector("#one").value;
-    document.querySelector("span").innerHTML=range;
-}
+   
 
 
 
