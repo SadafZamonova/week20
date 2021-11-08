@@ -3,7 +3,8 @@ let json = `[{
     "universe":  "DC Comics",
     "activity": "борец за справедливость",
     "superpowers": "непробиваемость, суперсила, полет, самоисцеление, суперзрение и суперслух, классный костюм",
-    "isRange": 7
+    "isRange": 7,
+    "id" : "one"
 },
 
 {
@@ -11,7 +12,8 @@ let json = `[{
     "universe": "Marvel Comics",
     "activity":  "гений, миллиардер, плейбой, филантроп",
     "superpowers":  "высокий уровень интеллекта, широкие познания науки и техники, связь со всемирной паутиной, бронекостюмы",
-    "isRange": 3
+    "isRange": 3,
+    "id" : "two"
 },
 {
     "person": "Чудо-женщина",
@@ -19,6 +21,7 @@ let json = `[{
     "activity": "супергероиня, секретарь-референт",
     "superpowers": "сверхчеловеческая сила искорость, выносливость, полет",
     "isRange": 5
+    "id" : "three"
 }]`;
 
 document.addEventListener("DOMContentLoaded", function (event) {
