@@ -20,7 +20,7 @@ let json = `[{
     "universe":  "DC Comics",
     "activity": "супергероиня, секретарь-референт",
     "superpowers": "сверхчеловеческая сила искорость, выносливость, полет",
-    "isRange": 5
+    "isRange": 5,
     "id" : "three"
 }]`;
 
