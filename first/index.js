@@ -43,7 +43,7 @@ document.querySelector("#one").oninput = () => {
     document.querySelector("span").innerHTML=range;
 }
 
-setFromlocalStorage();
+
 
 });
 
@@ -53,8 +53,7 @@ function getFromlocalStorage(){
 }
 
 
-function setFromlocalStorage(){
-    localStorage.setItem("json", json);
+function setFromlocalStorage(data){
+    localStorage.setItem("json", JSON.stringify(data));
 }
 
-setFromlocalStorage();
